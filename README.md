@@ -1,7 +1,8 @@
 # faceofstreet
 
-[![github action status](https://github.com/EdZev/faceofstreet/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-boilerplates/webpack-package/actions)
-[![Code Climate](https://codeclimate.com/github/hexlet-boilerplates/webpack-package/badges/gpa.svg)](https://codeclimate.com/github/hexlet-boilerplates/webpack-package)
+[![Node.js CI](https://github.com/EdZev/faceofstreet/actions/workflows/nodejs.yml/badge.svg?branch=main)](https://github.com/EdZev/faceofstreet/actions/workflows/nodejs.yml)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/ed677249438a9f891b88/maintainability)](https://codeclimate.com/github/EdZev/faceofstreet/maintainability)
 
 ## Setup
 
