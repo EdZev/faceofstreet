@@ -2,3 +2,6 @@
 *.log
 dist
 assets
+images
+css
+coverage

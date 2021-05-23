@@ -1,0 +1,81 @@
+<!--Modal-->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0 d-flex bd-highlight ml-5">
+        <span class="card-description text-center align-self-center w-100 bd-highlight text-uppercase"></span>
+        <button type="button" class="close flex-shrink-1 bd-highlight" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="color: white; font-family: 'Furore'; font-size: 2rem;">✘</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="img-container">
+            <img class="img-modern img-card" src="../images/len/020m.jpg">
+            <img class="img-old img-card animation-running" src="../images/len/020o.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-around border-0">
+        <button type="button" class="close" id="prev" data-testid="prev">
+          <img src="../images/next_left.png">
+        </button>
+        <button type="button" class="close" id="play" data-testid="play" onclick="this.blur();">
+          <img src="../images/play.png" id="imgPlay">
+        </button>
+        <button type="button" class="close" id="next" data-testid="next">
+          <img src="../images/next_right.png">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Modal-->
+
+<header>
+  <div class="container mt-3">
+    <div class="row align-items-center">
+      <div class="col-sm img-parent mt-1">
+        <img src="../images/logo1.png" alt="logo" width="100%">
+      </div>
+      <div class="col-sm article mt-1">
+        <h1 class="header">старая - новая пермь</h1>
+        С помощью технологии "Реперная суперимпозиция", мы находим точку съёмки старой фотографии и снимаем снова.
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="container mt-3">
+  <ul class="nav nav-tabs nav-fill">
+    <li class="nav-item">
+      <a class="nav-link mt-1 active" id="len" href="#">Ленинский район</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white mt-1" id="svrd" href="#">Свердловский район</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white mt-1" id="dzer" href="#">Дзержинский район</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white mt-1" id="ind" href="#">Индустриальный район</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white mt-1" id="mot" href="#">Мотовилихинский район</a>
+    </li>
+  </ul>
+</nav>
+<main>
+  <div class="container mt-3">
+    <div class="row justify-content-center align-items-center mt-1 photo-container"><div id="4" class="col pt-2 pr-2 pb-2 pl-2 photo"><a href="#modal" data-toggle="modal" data-target="#modal"><img src="../images/len/005s.jpg" alt="Здание администрации города Перми и Пермской городской Думы. ул. Ленина, 23" title="Здание администрации города Перми и Пермской городской Думы. ул. Ленина, 23" class="img-preview border border-dark rounded-lg"></a><div class="hint text-center"><span class="comment" data-descr="Здание администрации города Перми и Пермской городской Думы. ул. Ленина, 23">···</span></div></div><div id="3" class="col pt-2 pr-2 pb-2 pl-2 photo"><a href="#modal" data-toggle="modal" data-target="#modal"><img src="../images/len/004s.jpg" alt="«Нулевой километр» Здание Главпочтамта ул. Ленина, 28" title="«Нулевой километр» Здание Главпочтамта ул. Ленина, 28" class="img-preview border border-dark rounded-lg"></a><div class="hint text-center"><span class="comment" data-descr="«Нулевой километр» Здание Главпочтамта ул. Ленина, 28">···</span></div></div><div id="2" class="col pt-2 pr-2 pb-2 pl-2 photo"><a href="#modal" data-toggle="modal" data-target="#modal"><img src="../images/len/003s.jpg" alt="Комсомольский проспект (ул. Кунгурская)" title="Комсомольский проспект (ул. Кунгурская)" class="img-preview border border-dark rounded-lg"></a><div class="hint text-center"><span class="comment" data-descr="Комсомольский проспект (ул. Кунгурская)">···</span></div></div><div id="1" class="col pt-2 pr-2 pb-2 pl-2 photo"><a href="#modal" data-toggle="modal" data-target="#modal"><img src="../images/len/002s.jpg" alt="Духовная семинария. Бизнес-центр «Бажов» Монастырска 12" title="Духовная семинария. Бизнес-центр «Бажов» Монастырска 12" class="img-preview border border-dark rounded-lg"></a><div class="hint text-center"><span class="comment" data-descr="Духовная семинария. Бизнес-центр «Бажов» Монастырска 12">···</span></div></div><div id="0" class="col pt-2 pr-2 pb-2 pl-2 photo"><a href="#modal" data-toggle="modal" data-target="#modal"><img src="../images/len/001s.jpg" alt="Пермский гарнизонный военный лазарет. ГКБ № 2 им Ф.Х. Граля. ул. Плеханова 36 к1" title="Пермский гарнизонный военный лазарет. ГКБ № 2 им Ф.Х. Граля. ул. Плеханова 36 к1" class="img-preview border border-dark rounded-lg"></a><div class="hint text-center"><span class="comment" data-descr="Пермский гарнизонный военный лазарет. ГКБ № 2 им Ф.Х. Граля. ул. Плеханова 36 к1">···</span></div></div></div>
+  </div>
+</main>
+<footer class="footer border-top py-3 mt-5">
+  <div class="container-xl">
+    <div class="d-flex p-2 bd-highlight justify-content-center footer-data">современные фото - Э. Загуменных</div>
+    <div class="d-flex p-2 bd-highlight justify-content-center footer-data">реперная суперимпозиция - Д. Загуменных
+    </div>
+
+    <div class="d-flex p-2 bd-highlight justify-content-center footer-data">e-mail: <a href="mailto: repoldperm@gmail.com" target="_blank">repoldperm@gmail.com</a></div>
+    <div class="d-flex p-2 bd-highlight justify-content-center footer-data">created by <a href="https://github.com/EdZev/frontend-project-lvl3" target="_blank">EdZev</a></div>
+  </div>
+</footer>
