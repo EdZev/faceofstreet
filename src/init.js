@@ -41,7 +41,6 @@ export default async () => {
 
   const districtDefault = 'len';
   const dataLink = '../assets/districts.xlsx';
-  //const dataLink = '../__tests__/__fixtures__/districtsForTest.xlsx';
   await getData(dataLink)
     .then((districtsData) => {
       watchedState.districts = {
