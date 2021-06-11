@@ -7,7 +7,7 @@ const getActiveCard = (watchedState) => {
   const photos = document.querySelectorAll('.img-preview');
   photos.forEach((photo) => {
     photo.addEventListener('click', (evt) => {
-      const targetId = evt.target.closest('div').id;
+      const targetId = evt.target.closest('.photo').id;
       state.modalImg = targetId;
       state.animation = true;
     });
@@ -41,6 +41,7 @@ export default async () => {
 
   const districtDefault = 'len';
   const dataLink = '../assets/districts.xlsx';
+  //const dataLink = '../__tests__/__fixtures__/districtsForTest.xlsx';
   await getData(dataLink)
     .then((districtsData) => {
       watchedState.districts = {
