@@ -40,7 +40,7 @@ export default async () => {
   const watchedState = watcher(state, fields);
 
   const districtDefault = 'len';
-  const dataLink = '../assets/districts.xlsx';
+  const dataLink = './assets/districts.xlsx';
   await getData(dataLink)
     .then((districtsData) => {
       watchedState.districts = {

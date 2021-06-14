@@ -24,7 +24,7 @@ test('district', async () => {
   fetch.mockReturnValue(Promise.resolve(new Response(dataXlsx)));
   await setHtml('source.html');
   await init();
-  expect(fetch).toHaveBeenCalledWith('../assets/districts.xlsx');
+  expect(fetch).toHaveBeenCalledWith('./assets/districts.xlsx');
   expect(document.body.innerHTML).toEqual(expectedLen);
   userEvent.click(screen.getByText('Свердловский район'));
   expect(document.body.innerHTML).toEqual(expectedSvrd);
@@ -36,7 +36,7 @@ test('modal', async () => {
   fetch.mockReturnValue(Promise.resolve(new Response(dataXlsx)));
   await setHtml('source.html');
   await init();
-  expect(fetch).toHaveBeenCalledWith('../assets/districts.xlsx');
+  expect(fetch).toHaveBeenCalledWith('./assets/districts.xlsx');
   expect(document.body.innerHTML).toEqual(expectedLen);
   const preview = screen.getByAltText(/Духовная семинария. Бизнес-центр «Бажов» Монастырска 12/i);
   userEvent.click(preview);
@@ -69,6 +69,6 @@ test('get data error', async () => {
   fetch.mockReturnValue(Promise.resolve(new Error('not found')));
   await setHtml('source.html');
   await init();
-  expect(fetch).toHaveBeenCalledWith('../assets/districts.xlsx');
+  expect(fetch).toHaveBeenCalledWith('./assets/districts.xlsx');
   expect(document.body.innerHTML).toEqual(expectedError);
 });

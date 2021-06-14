@@ -32,7 +32,7 @@ const renderDistricts = (state, fields) => {
     link.dataset.toggle = 'modal';
     link.dataset.target = '#modal';
     const img = document.createElement('img');
-    img.src = `../${imgUrlSmall}`;
+    img.src = `./${imgUrlSmall}`;
     img.alt = altTxt;
     img.title = altTxt;
     img.classList.add('img-preview', 'border', 'border-dark', 'rounded-lg');
@@ -40,9 +40,10 @@ const renderDistricts = (state, fields) => {
     previewCard.appendChild(link);
     const divHint = document.createElement('div');
     divHint.classList.add('hint', 'text-left', 'pl-2');
-    const previewDescription = altTxt ? altTxt.substring(0, 15) : '...';
-    const threeDots = previewDescription.length < 15 ? '' : '...';
-    const imgDescription = altTxt ?? '...';
+    const description = altTxt ?? '...';
+    const threeDots = (description.length <= 25) ? '' : '...';
+    const previewDescription = description.substring(0, 25);
+    const imgDescription = description;
     divHint.innerHTML = `<span class="comment" data-descr="${imgDescription}">${previewDescription}${threeDots}</span>`;
     previewCard.appendChild(divHint);
     return divPhoto;
@@ -60,13 +61,13 @@ const renderModal = (state, fields) => {
   const imgModern = document.createElement('img');
   imgModern.classList.add('img-modern', 'img-card');
   imgModern.alt = imgUrlModern;
-  imgModern.src = `../${imgUrlModern}`;
+  imgModern.src = `./${imgUrlModern}`;
   const imgOld = document.createElement('img');
   imgOld.classList.add('img-old', 'img-card', 'animation-running');
   imgOld.alt = imgUrlOld;
-  imgOld.src = `../${imgUrlOld}`;
+  imgOld.src = `./${imgUrlOld}`;
   cardContainer.append(imgModern, imgOld);
-  imgPlay.src = '../images/pause.png';
+  imgPlay.src = './images/pause.png';
 };
 
 const renderPause = (state, fields) => {
