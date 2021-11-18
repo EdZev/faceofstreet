@@ -28,6 +28,7 @@ test('app', async () => {
   const pageModalPause = await fileData('expectedModalPause.html');
   const pageModalNext = await fileData('expectedModalNext.html');
   const pageModalPrev = await fileData('expectedModalPrev.html');
+  // @ts-ignore
   fetch.mockReturnValue(Promise.resolve(new Response(dataXlsx)));
   const app = await init();
   render(app);

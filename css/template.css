@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Bold.ttf');
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+body,
+.modal-content,
+.hamburger,
+.nav-link,
+.close,
+.control,
+.container {
+    background-color: #31373d;
+    color: white;
+}
+
+body,
+.nav-link,
+.modal-content,
+.container {
+    font-family: 'Roboto';
+}
+
+.preview {
+    position: relative;
+    width: 200px;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.viewed::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-style: bold;
+    color:yellowgreen;
+    background-color: rgba(50, 55, 60, 0.5);
+    content: '\00A0\00A0\2713';
+}
+
+.popup-nav {
+    position:fixed;
+    top: -95px;
+    font-family: 'Roboto';
+    background-color: #31373d;
+    z-index: 99;
+}
+
+.popup-nav-visible {
+    top: 0;
+    animation-name: n-visible;
+    animation-duration: .2s;  
+    animation-timing-function: linear;
+}
+
+@keyframes n-visible {
+    from {
+        top: -81px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.mobile-link {
+    display: block;
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+#modal-dialog {
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-img > img,
+.container-img > img {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.spinner-border {
+    width: 4rem;
+    height: 4rem;
+}
+
+.hint {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.comment {
+    width: 200px;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+.comment:hover {
+    cursor: pointer;
+}
+
+.comment[data-descr] {
+    position: relative;
+}
+
+.comment[data-descr]:hover::after {
+    width: 200px;
+    cursor: pointer;
+    content: attr(data-descr);
+    position: absolute;
+    top: -2px;
+    left: -10px;
+    border-radius: 0 10px 10px 10px;
+    background-color: #31373d;
+    padding: 0 10px 10px 10px;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: left;
+    z-index: 1;
+  }
+
+.modal-body {
+    position: relative;
+    min-height: 4rem;
+}
+
+.img-modern {
+    position: relative;
+}
+
+.img-old {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.img-old {
+    animation-name: look;
+    animation-duration: 3s;  
+    animation-timing-function: linear;  
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animation-paused {
+    animation-play-state: paused;
+}
+
+.animation-running {
+    animation-play-state: running;
+}
+
+@keyframes look {
+    from {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
